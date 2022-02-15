@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        token: ${{ secrets.DOCKER_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Check astyle
       run: make check_format
