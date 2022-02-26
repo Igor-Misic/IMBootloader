@@ -93,10 +93,13 @@ format:
 #######################################
 # Cppcheck
 #######################################
-.PHONY: cppcheck
+.PHONY: cppcheck misra
 cppcheck:
 	$(call colorecho,'Checking code with cppcheck')
 	@cppcheck --error-exitcode=1 Bootloader
+misra:
+	$(call colorecho,'Checking MISRA C:2012 with cppcheck')
+	@cppcheck cppcheck --addon=misra.py --error-exitcode=1 Bootloader
 
 #
 # Bootloaders to build
