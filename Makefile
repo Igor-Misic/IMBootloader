@@ -96,7 +96,7 @@ format:
 .PHONY: cppcheck
 cppcheck:
 	$(call colorecho,'Checking code with cppcheck')
-	@cppcheck Bootloader
+	@cppcheck --error-exitcode=1 Bootloader
 
 #
 # Bootloaders to build
