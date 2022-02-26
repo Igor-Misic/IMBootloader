@@ -90,6 +90,14 @@ format:
 	$(call colorecho,'Formatting with astyle')
 	@Tools/astyle/check_code_style_all.sh --fix
 
+#######################################
+# Cppcheck
+#######################################
+.PHONY: cppcheck
+cppcheck:
+	$(call colorecho,'Checking code with cppcheck')
+	@cppcheck Bootloader
+
 #
 # Bootloaders to build
 #
